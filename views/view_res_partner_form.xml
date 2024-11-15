@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_res_partner_form_inherit_calyx_test" model="ir.ui.view">
+            <field name="name">view.res.partner.form.inherit.calyx.test</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <data>
+                    <xpath expr="//field[@name='vat']" position="after">
+                        <field name="has_credit_control"/>
+                        <field name="credit_groups_ids" widget="many2many_tags"
+                                attrs="{'invisible':[('has_credit_control', '=', False)]}"/>
+                    </xpath>
+                </data>
+            </field>
+        </record>
+    </data>
+</odoo>

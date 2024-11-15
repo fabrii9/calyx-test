@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_sale_order_form_inherit_calyx_test" model="ir.ui.view">
+            <field name="name">view.sale.order.form.inherit.calyx.test</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form"/>
+            <field name="arch" type="xml">
+                <data>
+                    <xpath expr="//field[@name='partner_id']" position="after">
+                        <field name="sale_channel_id" required="1"/>
+                        <field name="credit_group_id" />
+                        <field name="credit_state" />
+                    </xpath>
+                </data>
+            </field>
+        </record>
+    </data>
+</odoo>

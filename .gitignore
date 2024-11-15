@@ -1,0 +1,15 @@
+# Archivos innecesarios de Python
+*.pyc
+*.pyo
+__pycache__/
+
+# Archivos de configuración local
+.env
+venv/
+
+# Archivos del sistema operativo
+.DS_Store
+
+# Logs y temporales
+*.log
+
